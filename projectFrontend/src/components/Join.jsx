@@ -7,8 +7,7 @@ const Join = () => {
   const {
     register,
     handleSubmit,
-    watch,
-    setError,    
+    watch,    
     formState: { errors, isSubmitting },
   } = useForm();
   const onSubmit = async (data) => {
@@ -17,8 +16,13 @@ const Join = () => {
     }, body: JSON.stringify(data)})
     let res = await r.text()
     console.log(data, res)
-    alert("Joining Successful")
-    nav("/")
+    if (res === "false") {
+      alert("Joining Successful")
+      nav("/")
+    }else {
+      alert("Member with same username already exists. Please try other credentials")
+    }
+    
   }
   return (
     <div>

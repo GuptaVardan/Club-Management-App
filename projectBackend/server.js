@@ -41,11 +41,16 @@ app.get('/login_admin', (req, res) => {
     res.send('Hello World!')
 })
 
-app.post('/', (req, res) => { 
+app.post('/', async (req, res) => { 
     console.log(req.body)
-    const userInsert = new UserInsert(req.body)
-    userInsert.save()
-    res.send('Hello World!')
+    const User = await UserInsert.findOne({'username': req.body.username})
+    const isJoined = User? true:false
+    if (!isJoined) {
+      const userInsert = new UserInsert(req.body)
+      userInsert.save()
+    } 
+    res.send(isJoined)
+    
 })
 
 app.post('/login_member', async (req, res) => {
