@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  
+  .Heading{
+    text-align: center;
+    margin:10vh;
+  }
+  
+  .read-the-docs {
+    text-align: center;
+    color: #888;
+    font-size: x-large;
+  }
+  
+  img{
+    align-self: center;
+    display: flex;
+    margin:  10vh auto;
+    border-radius: 20px;
+    width: 60vw;
+    height: 45vh;
+  }
+  

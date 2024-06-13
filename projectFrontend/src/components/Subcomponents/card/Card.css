@@ -1,0 +1,28 @@
+
+.card{
+    width: 40vw;
+    border: 5px solid black;
+    border-radius: 20px;
+    margin: 34px;
+    padding: 4px;
+    height: 200px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(165, 240, 255);
+}
+.card h1{
+    margin: 2px;
+    box-sizing: content-box;
+    font-size: larger;
+    font-weight: 500;
+}
+p{
+    font-size: large;
+    text-align: center;
+}
+.card h3{
+    font-size: large;
+    font-weight: 500;
+}

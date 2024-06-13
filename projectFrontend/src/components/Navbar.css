@@ -1,0 +1,21 @@
+
+ul{
+    width: 100vw;
+    display:flex;
+    justify-content: space-evenly;
+    gap: 10vw;
+    background-color: black
+}
+
+li{
+    list-style: none;
+    color: white;
+    font-size: x-large;
+}
+NavLink::hover{
+    color:red;
+}
+
+.red{
+    color: red;
+}
