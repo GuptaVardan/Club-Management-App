@@ -1,8 +1,9 @@
 import './Form.css'
 import { useForm } from "react-hook-form"
- 
+import { useNavigate } from 'react-router-dom';
 
 const Join = () => {
+  const nav = useNavigate()
   const {
     register,
     handleSubmit,
@@ -16,6 +17,8 @@ const Join = () => {
     }, body: JSON.stringify(data)})
     let res = await r.text()
     console.log(data, res)
+    alert("Joining Successful")
+    nav("/")
   }
   return (
     <div>
